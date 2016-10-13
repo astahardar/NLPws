@@ -3,6 +3,7 @@
 	<name>Servers</name>
 	<comment></comment>
 	<projects>
+		<project>icenlp</project>
 	</projects>
 	<buildSpec>
 	</buildSpec>

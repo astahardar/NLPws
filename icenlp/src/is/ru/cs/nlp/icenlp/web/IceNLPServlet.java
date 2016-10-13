@@ -26,12 +26,8 @@ import java.util.logging.Logger;
 import is.iclt.icenlp.core.lemmald.Lemmald;
 import is.iclt.icenlp.core.iceparser.OutputFormatter;
 
-/**
- * Web interface for tagging and parsing Icelandic text
- * @author Sverrir Sigmundarson
- * Various changes made by Hrafn Loftsson
- */
-@WebServlet("/IceNLPServlet/process/")
+
+@WebServlet(name="IceNLPServlet", urlPatterns={"/process"})
 public class IceNLPServlet extends HttpServlet
 {
     private String defaultEncoding="UTF-8";
@@ -46,12 +42,11 @@ public class IceNLPServlet extends HttpServlet
     OutputFormatter.OutputType outType=OutputFormatter.OutputType.plain;
     private final static Logger LOGGER = Logger.getLogger(IceNLPServlet.class.getName());
     
-   
-    
+  
     @Override
     public  void init(ServletConfig config) throws ServletException
     {
-    	LOGGER.info("info");
+    	LOGGER.info("***Init***");
         super.init(config);
         //defaultEncoding = FileEncoding.getEncoding();
         TokenizerResources tokResources = new TokenizerResources();

@@ -96,8 +96,8 @@
   <!--                       listings is enabled? [true]                    -->
 
     <servlet>
-        <servlet-name>/IceNLPServlet/process/</servlet-name>
-        <servlet-class>org.apache.catalina.servlets.DefaultServlet</servlet-class>
+        <servlet-name>default</servlet-name>
+        <servlet-class>is.ru.cs.nlp.icenlp.web.IceNLPServlet</servlet-class>
         <init-param>
             <param-name>debug</param-name>
             <param-value>0</param-value>
